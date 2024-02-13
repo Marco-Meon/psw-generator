@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Genera Password</h1>
+  
+  <div class="genera-password">
+
+    <div class="genera-password__container">
+      <div class="genera-password__container-result">
+        <div class="genera-password__risultato"></div>
+        <div class="genera-password__icons">
+          <div id="genera-password__copia">
+            <svg width="44" height="53" viewBox="0 0 44 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.957" fill-rule="evenodd" clip-rule="evenodd" d="M2.88267 1.07224C11.9867 1.02119 21.0901 1.07225 30.193 1.22542C31.4496 1.67702 32.3093 2.54504 32.7723 3.82947C32.9747 5.25915 32.9747 6.68881 32.7723 8.11849C32.6312 8.55683 32.3781 8.91425 32.0137 9.19074C29.0772 9.64409 27.9646 8.36759 28.6758 5.36126C20.685 5.36126 12.6941 5.36126 4.70335 5.36126C4.70335 16.1859 4.70335 27.0106 4.70335 37.8353C7.52667 37.0678 8.79102 38.0892 8.49646 40.8988C8.2436 41.3584 7.88956 41.7159 7.43439 41.9711C5.54564 42.2961 3.72495 42.0918 1.97232 41.3584C1.40236 40.8857 0.94719 40.3241 0.606803 39.6734C0.404503 27.6233 0.404503 15.5732 0.606803 3.52311C1.11976 2.44446 1.87838 1.6275 2.88267 1.07224Z" fill="white"/>
+              <path opacity="0.965" fill-rule="evenodd" clip-rule="evenodd" d="M13.1998 11.1821C22.2026 11.1311 31.2049 11.1821 40.2067 11.3353C41.4712 11.7948 42.3308 12.6628 42.786 13.9393C42.9884 25.7852 42.9884 37.6309 42.786 49.4769C42.3387 50.7455 41.479 51.6134 40.2067 52.0809C31.2043 52.2853 22.2021 52.2853 13.1998 52.0809C11.9354 51.6214 11.0757 50.7535 10.6205 49.4769C10.4182 37.6309 10.4182 25.7852 10.6205 13.9393C11.1326 12.6572 11.9924 11.7381 13.1998 11.1821ZM14.717 15.4711C22.7078 15.4711 30.6987 15.4711 38.6894 15.4711C38.6894 26.2958 38.6894 37.1205 38.6894 47.9451C30.6987 47.9451 22.7078 47.9451 14.717 47.9451C14.717 37.1205 14.717 26.2958 14.717 15.4711Z" fill="white"/>
+            </svg>
+          </div>
+          <div id="genera-password__change-pass">
+            <svg width="45" height="49" viewBox="0 0 45 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.81112 26.2151H5.71275C6.7 26.2151 7.49669 27.0088 7.53077 27.9872C8.34108 35.5548 14.7141 41.4461 22.4694 41.4461C30.7694 41.4461 37.4898 34.6996 37.4898 26.3725C37.4898 18.1208 30.7218 11.4153 22.5306 11.299V13.7485C22.5306 14.8639 21.7408 15.3633 20.7739 14.8639L8.25234 8.42531C7.28548 7.92577 7.28548 7.11838 8.25234 6.61894L20.7739 0.193878C21.7408 -0.305565 22.5306 0.193878 22.5306 1.30233V3.77236C34.8752 3.88872 45 13.9743 45 26.3862C45 38.8734 34.9161 49 22.4693 49C10.5673 49 0.817024 39.7424 4.57764e-05 28.001C-0.0067215 27.0157 0.817116 26.2151 1.81112 26.2151Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="genera-password__color-line"></div>
+    </div>
+
+
+    <h2>Lunghezza password</h2>
+    <div class="genera-password__container-lunghezza">
+      <div class="genera-password__range-container">
+        <div class="genera-password__range-minus">-</div>
+        <input type="range" min="1" max="50" id="genera-password__range" value="8">
+        <div class="genera-password__range-plus">+</div>
+      </div>
+      <input type="number" min="1" max="50" value="8" id="genera-password__range-value">
+    </div>
+
+
+    <h2>Personalizza password</h2>
+
+    <div class="genera-password__container-checkbox">
+  
+      <div class="genera-password__checkbox-wrapper">
+        <input class="genera-password__checkbox" checked type="checkbox" id="genera-password__caratteri-minuscoli">
+        <svg viewBox="0 0 35.6 35.6">
+          <circle class="genera-password__background" cx="17.8" cy="17.8" r="17.8"></circle>
+          <circle class="genera-password__stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+          <polyline class="genera-password__check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+        </svg>
+        <label for="genera-password__caratteri-minuscoli">abc</label>
+      </div>
+  
+      <div class="genera-password__checkbox-wrapper">
+        <input class="genera-password__checkbox" checked type="checkbox" id="genera-password__caratteri-maiuscoli">
+        <svg viewBox="0 0 35.6 35.6">
+          <circle class="genera-password__background" cx="17.8" cy="17.8" r="17.8"></circle>
+          <circle class="genera-password__stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+          <polyline class="genera-password__check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+        </svg>
+        <label for="genera-password__caratteri-maiuscoli">ABC</label>
+      </div>
+  
+      <div class="genera-password__checkbox-wrapper">
+        <input class="genera-password__checkbox" checked type="checkbox" id="genera-password__caratteri-speciali">
+        <svg viewBox="0 0 35.6 35.6">
+          <circle class="genera-password__background" cx="17.8" cy="17.8" r="17.8"></circle>
+          <circle class="genera-password__stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+          <polyline class="genera-password__check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+        </svg>
+        <label for="genera-password__caratteri-speciali">@#$</label>
+      </div>
+  
+      <div class="genera-password__checkbox-wrapper">
+        <input class="genera-password__checkbox" checked type="checkbox" id="genera-password__caratteri-numerici">
+        <svg viewBox="0 0 35.6 35.6">
+          <circle class="genera-password__background" cx="17.8" cy="17.8" r="17.8"></circle>
+          <circle class="genera-password__stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+          <polyline class="genera-password__check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+        </svg>
+        <label for="genera-password__caratteri-numerici">123</label>
+      </div>
+  
+    </div>
+
+  </div>
+  
+
+
+  <script src="script.js"></script>
+</body>
+</html>

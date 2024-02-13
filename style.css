@@ -1,0 +1,61 @@
+body{font-family: sans-serif;background: #00061A;color: #fff;width: 100vw;display: flex;justify-content: center;align-items: center;overflow: hidden;background-image: url(img.svg);background-repeat: no-repeat;background-size: cover;flex-direction: column;margin: 0;}
+h1{font-family: 'Bebas Neue';font-size: clamp(40px, 11vw, 120px);color: #FFD600;font-weight: normal;margin-bottom: 50px;text-align: center;}
+
+
+
+
+
+
+/* Generatore password struttura generale */
+.genera-password{width: min(1250px, 100% - 4rem);display: flex;flex-direction: column;align-items: center;margin: 0 auto;position: relative;height: auto;}
+.genera-password h2{color: #FFD600;font-size: clamp(25px, 4vw, 40px);font-weight: 200;margin-bottom: 15px;text-align: center;}
+
+/* Generatore password container password */
+.genera-password__container{border: 1px solid #FFD600;display: flex;flex-direction: column;padding: 25px 25px 13px 25px;border-radius: 30px;width: 60%;background: #000;}
+.genera-password__container-result{display: flex;flex-direction: row;align-items: center;justify-content: space-between;}
+.genera-password__risultato{font-size: 27px;overflow-x: auto;text-wrap: nowrap;white-space: nowrap;scrollbar-width: none;-ms-overflow-style: none;padding-right: 15px;}
+
+/* Generatore password container icons */
+.genera-password__icons{display: flex;flex-direction: row;align-items: center;cursor: pointer;}
+#genera-password__copia{position: relative;display: flex;align-items: center;margin-right: 10px;}
+#genera-password__change-pass{display: flex;align-items: center;}
+#genera-password__copia svg path, #genera-password__change-pass svg path{transition: all 0.5s cubic-bezier(.215, .61, .355, 1);}
+#genera-password__copia:after{content: '';position: absolute;left: -40px; background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 100%);width: 40px;height: 100%;}
+#genera-password__copia:hover svg path, #genera-password__change-pass:hover svg path{fill: #FFD600;}
+
+/* Generatore password color line */
+.genera-password__color-line{width: 40%;background: rgb(220, 220, 10); height: 2px;transition: all 1s cubic-bezier(.215, .61, .355, 1);margin-top: 5px;}
+
+/* Generatore password valore input */
+.genera-password__container-lunghezza{display: flex;flex-direction: row;align-items: center;width: calc(60% + 50px);justify-content: space-between;}
+.genera-password__range-container{display: flex;flex-direction: row;align-items: center;width: 80%;}
+#genera-password__range{-webkit-appearance: none;height: 15px;border-radius: 10px;background-color: #FFD600;outline: none;cursor: pointer;margin: 0 15px;width: calc(100% - 110px);}
+#genera-password__range::-webkit-slider-thumb{-webkit-appearance: none;background-color: #00061A;border: 1px solid #FFD600; width: 40px;height: 40px;border-radius: 50%;cursor: pointer;}
+#genera-password__range-value{padding: 10px;border-radius: 100px;margin-left: 10px;border: 1px solid #FFD600;background: transparent;color: #fff;font-size: 27px;text-align: center;}
+.genera-password__range-plus, .genera-password__range-minus{border: 1px solid #FFD600;font-size: 30px;width: 40px;text-align: center;border-radius: 100%;height: 40px;cursor: pointer;margin: 0;}
+
+/* Generatore password caselle checkbox di controllo */
+.genera-password__container-checkbox{width: calc(60% + 50px);display: flex;flex-direction: row;justify-content: space-evenly;}
+.genera-password__checkbox-wrapper {position: relative;display: flex;width: 100px;height: 30px;align-items: center;}
+.genera-password__checkbox-wrapper label{font-size: 27px;}
+.genera-password__checkbox-wrapper:hover .genera-password__check {stroke-dashoffset: 0;}
+.genera-password__checkbox-wrapper .genera-password__background {fill: #49157F;transition: ease all 0.6s;-webkit-transition: ease all 0.6s;}
+.genera-password__checkbox-wrapper svg{height: 40px;}
+.genera-password__checkbox-wrapper .genera-password__stroke {fill: none;stroke: #FFD600;stroke-miterlimit: 10;stroke-width: 2px;stroke-dashoffset: 100;stroke-dasharray: 100;transition: ease all 0.6s;-webkit-transition: ease all 0.6s;}
+.genera-password__checkbox-wrapper .genera-password__check {fill: none;stroke: #FFD600;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px;stroke-dashoffset: 22;stroke-dasharray: 22;transition: ease all 0.6s;-webkit-transition: ease all 0.6s;}
+.genera-password__checkbox-wrapper input[type=checkbox] {position: absolute;width: 100%;height: 100%;left: 0;top: 0;margin: 0;opacity: 0;-appearance: none;}
+.genera-password__checkbox-wrapper input[type=checkbox]:hover {cursor: pointer;}
+.genera-password__checkbox-wrapper input[type=checkbox]:checked + svg .genera-password__background {fill: #49157F;}
+.genera-password__checkbox-wrapper input[type=checkbox]:checked + svg .genera-password__stroke {stroke-dashoffset: 0;}
+.genera-password__checkbox-wrapper input[type=checkbox]:checked + svg .genera-password__check {stroke-dashoffset: 0;}
+
+/* Generatore password media queries */
+@media (max-width: 700px) {
+  .genera-password__container{width: 90%;}
+  .genera-password__container-checkbox, .genera-password__container-lunghezza{width: calc(90% + 50px);}
+  .genera-password__checkbox-wrapper label{font-size: 20px;}
+  @media (max-width: 400px) {
+    .genera-password__container-lunghezza{flex-direction: column;width: 100%;}
+    .genera-password__range-container{width: 100%;}
+  }
+}
